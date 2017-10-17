@@ -1,0 +1,22 @@
+{
+    "name": "Rest With OAuth2.0 Security",
+    "description": "A Restful web service with endpoints protected with Oauth2.0 security",
+    "repository": "https://github.com/Prempeh-Gyan/RestWithSpringOAuth2Security",
+    "logo": "https://i.imgur.com/NaAbFil.png",
+    "success_url": "/index",
+    "keywords": [
+        "Java",
+        "Spring",
+        "Thymeleaf",
+        "Jsoup",
+        "RESTful Services",
+        "Web Service",
+        "OAuth2.0",
+        "JPA",
+        "Hibernate"
+    ],
+    "env": {
+        "BUILDPACK_URL": "heroku/java"
+    },
+    "generator": "https://www.expeditedssl.com/heroku-button-maker"
+}

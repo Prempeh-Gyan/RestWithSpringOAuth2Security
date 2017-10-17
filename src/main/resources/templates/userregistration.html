@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+<meta charset="utf-8"></meta>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+
+<title>User Registration</title>
+
+<!-- Bootstrap -->
+<link th:href="@{css/bootstrap.min.css}" rel="stylesheet"></link>
+
+<!-- Font Awesome -->
+<link th:href="@{css/font-awesome.min.css}" rel="stylesheet"></link>
+
+<link th:href="@{css/custom.min.css}" rel="stylesheet"></link>
+</head>
+
+<body class="nav-md">
+	<div class="container body">
+		<div class="main_container">
+			<div class="right_col" role="main">
+				<div id="wrapper">
+					<div id="page-wrapper" style="margin-bottom: 15%;">
+						<div class="col-lg-8">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="x_content">
+										<br />
+										<form class="form-horizontal form-label-left input_mask"
+											th:action="@{user-registration}" th:object="${signUPFormDTO}"
+											method="POST">
+											<div th:if="${#fields.hasErrors('*')}"
+												class="alert alert-danger alert-dismissible fade in"
+												id="formsDiv">
+												<button type="button" class="close" data-dismiss="alert"
+													aria-label="Close">
+													<span aria-hidden="true">×</span>
+												</button>
+												<p th:each="err : ${#fields.errors('*')}" th:text="${err}"></p>
+											</div>
+											<div th:if="${success}"
+												class="alert alert-success alert-dismissible fade in"
+												id="formsDiv">
+												<button type="button" class="close" data-dismiss="alert"
+													aria-label="Close">
+													<span aria-hidden="true">×</span>
+												</button>
+												<p th:text="${success}"
+													style="text-align: center; font-size: medium;"></p>
+											</div>
+											<div th:if="${duplicate}"
+												class="alert alert-danger alert-dismissible fade in"
+												id="formsDiv">
+												<button type="button" class="close" data-dismiss="alert"
+													aria-label="Close">
+													<span aria-hidden="true">×</span>
+												</button>
+												<p th:text="${duplicate}"
+													style="text-align: center; font-size: medium;"></p>
+											</div>
+											<div
+												class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback"
+												th:classappend="${#fields.hasErrors('firstName')}? 'has-error'">
+												<input type="text" class="form-control has-feedback-left"
+													id="inputSuccess2" placeholder="First Name"
+													name="firstName" th:field="*{firstName}"
+													required="required"></input>
+											</div>
+											<div
+												class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback"
+												th:classappend="${#fields.hasErrors('lastName')}? 'has-error'">
+												<input type="text" class="form-control has-feedback-left"
+													id="inputSuccess3" placeholder="Last Name" name="lastName"
+													th:field="*{lastName}" required="required"></input>
+											</div>
+											<div
+												class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback"
+												th:classappend="${#fields.hasErrors('email')}? 'has-error'">
+												<input type="email" class="form-control has-feedback-left"
+													id="inputSuccess4" placeholder="Email" name="email"
+													th:field="*{email}" required="required"></input>
+											</div>
+											<div
+												class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback"
+												th:classappend="${#fields.hasErrors('password') || #fields.hasErrors('valid')}? 'has-error'">
+												<input type="password"
+													class="form-control has-feedback-left" id="inputSuccess4"
+													placeholder="Create Password" name="password"
+													th:field="*{password}"></input>
+											</div>
+											<div
+												class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback"
+												th:classappend="${#fields.hasErrors('confirmPassword') || #fields.hasErrors('valid')}? 'has-error'">
+												<input type="password"
+													class="form-control has-feedback-left" id="inputSuccess5"
+													placeholder="Confirm Password" name="confirmPassword"
+													th:field="*{confirmPassword}"></input>
+											</div>
+											<div class="form-group">
+												<div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+													<button class="btn btn-primary" type="reset">Cancel</button>
+													<button type="submit" class="btn btn-success">Register</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<!-- /.panel -->
+						</div>
+					</div>
+					<!-- /#page-wrapper -->
+
+				</div>
+				<!-- /#wrapper -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
