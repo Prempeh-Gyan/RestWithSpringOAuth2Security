@@ -3,9 +3,6 @@
 ## Quick Start
 This section contains details on how to set up and run the application for testing.
 
-### Travis
-[![Build Status](https://travis-ci.org/Prempeh-Gyan/RestWithSpringOAuth2Security.svg?branch=master)](https://travis-ci.org/Prempeh-Gyan/RestWithSpringOAuth2Security)
-
 ### Deploy on Heroku
 To deploy this project on Heroku, click the button below:
 
@@ -234,14 +231,4 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 }
 
 ```
-
-## Graphical Overview of the Authentication Process
-
-*Retrieving resources from the non secured endpoint :http://localhost:8080/restfulService/no-security/summarizeLinksOnPage?url=http://www.someActualUrl*
-
-*Accessing the protected resource without being authenticated*
-
-*Requesting for the access token*
-
-*Using the access token to retrieve the protected resource*
 
