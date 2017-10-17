@@ -4,7 +4,7 @@
 This section contains details on how to set up and run the application for testing.
 
 ### Travis
-[![Build Status](https://travis-ci.org/Prempeh-Gyan/RestWithSpringOAuth2Security.svg)](https://travis-ci.org/Prempeh-Gyan/RestWithSpringOAuth2Security)
+[![Build Status](https://travis-ci.org/Prempeh-Gyan/RestWithSpringOAuth2Security.svg?branch=master)](https://travis-ci.org/Prempeh-Gyan/RestWithSpringOAuth2Security)
 
 ### Deploy on Heroku
 To deploy this project on Heroku, click the button below:
